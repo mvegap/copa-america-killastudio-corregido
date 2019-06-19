@@ -1,0 +1,1136 @@
+*{
+
+  padding: 0;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+
+  background: #000;
+
+  background-image: url('../images/bg.jpg');
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  background-position: center;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+
+  margin: 0;
+
+}
+
+p{
+
+  margin: 0;
+
+}
+
+
+
+/* init screens */
+
+#menuScreen{
+
+  display: none;
+
+}
+
+
+
+/* main */
+
+main.root-app{
+
+  max-width: 500px;
+
+  height: 100vh;
+
+  margin: 0 auto;
+
+  background: rgba(255,255,255,1);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+.logout-action{
+
+  position: absolute;
+
+  left: 20px;
+
+  top: 20px;
+
+  z-index: 99;
+
+}
+
+.nav-app{
+
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+
+  z-index: 999;
+
+}
+
+.navigation{
+
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+}
+
+.btn_menu{
+
+  background: transparent;
+
+  border: none;
+
+}
+
+.btn_menu img{
+
+  width: 35px;
+
+}
+
+
+
+/* splash screen */
+
+section.splash-screen{
+
+  padding: 0;
+
+  position: relative;
+
+}
+
+header.header-section{
+
+  width: 100%;
+
+  margin-bottom: 20px;
+
+}
+
+.logo{
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  max-width: 250px;
+
+}
+
+.logo > a > img{
+
+  width: 100%;
+
+}
+
+.contador-home{
+
+  text-align: center;
+
+  font-weight: 300;
+
+  color: #134383;
+
+  text-transform: uppercase;
+
+}
+
+.countdown{
+
+  font-weight: 700;
+
+  font-size: 90px;
+
+}
+
+.label_countdown{
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-content: center;
+
+  align-items: center;
+
+  font-weight: 400;
+
+  font-size: 12px;
+
+  margin-bottom: 15px;
+
+}
+
+.label_countdown div{
+
+  position: relative;
+
+  width: 33.33%;
+
+  border-right: 1px solid #134383;
+
+}
+
+.label_countdown div:last-child{
+
+  border-right: none;
+
+}
+
+.btn-primary{
+
+  background: #5b9f30;
+
+  border-color: #5b9f30;
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  text-transform: uppercase;
+
+  font-size: 30px;
+
+}
+
+.btn-primary:hover,
+
+.btn-primary:focus{
+
+  background: #fff;
+
+  color: #5b9f30;
+
+  border-color: #fff;
+
+  box-shadow: 0 0 10px #d1d1d1;
+
+}
+
+.btn-primary:active,
+
+.btn-primary:not(:disabled):not(.disabled):active{
+
+  background: #d1d1d1;
+
+  color: #fff;
+
+  border-color: #d1d1d1;
+
+  box-shadow: none;
+
+  outline: none;
+
+}
+.btn-ver-pronostico{
+
+  font-size: 14px;
+  color: #f15a25;
+
+}
+
+.copyright{
+
+  margin: 20px 0;
+
+  text-align: center;
+
+  font-weight: 300;
+
+  font-size: 14px;
+
+  color: #000;
+
+  position: absolute;
+
+  bottom: 0;
+
+}
+
+.copyright p span a img{
+
+  width: 110px;
+
+}
+
+
+
+
+
+/* login screen */
+
+section.login-screen{
+
+  padding: 0;
+
+  position: relative;
+
+}
+
+.login-form{
+
+  position: relative;
+
+  text-align: center;
+
+  padding: 0 60px;
+
+}
+
+#response{
+
+  padding-bottom: 10px;
+
+  font-weight: 300;
+
+  text-align: center;
+
+  color: red;
+
+}
+
+.loading{
+
+  display: none;
+
+  padding: 25px 0;
+
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  left: 0;
+
+  text-align: center;
+
+  background: #fff;
+
+  z-index: 999;
+
+}
+
+.loading img{
+
+  width: 135px;
+
+  height: 135px;
+
+}
+
+input.form-control{
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  font-size: 25px;
+
+  font-weight: 300;
+
+  color: #134383;
+
+  border-color: #5b9f30;
+
+}
+
+input.form-control:focus{
+
+  box-shadow: 0 0 0 0.2rem rgba(19,67,131,.35);
+
+}
+
+.container-reset-password{
+
+  margin: 15px 0;
+
+}
+
+.container-reset-password p a{
+
+  color: #5b9f30;
+  text-decoration: none;
+  transition: all .2s;
+
+}
+
+.container-reset-password p a:hover,
+.container-reset-password p a:focus{
+  color: #134383;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.whatsapp{
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  color: #134383;
+
+  margin: 15px 0;
+
+}
+
+.whatsapp a{
+
+  color: #134383;
+
+  text-decoration: none;
+
+  opacity: 1;
+
+  transition: all .2s;
+
+}
+
+.whatsapp a:hover,
+
+.whatsapp a:focus{
+
+  opacity: .8;
+
+  transition: all .2s;
+
+}
+
+.whatsapp img{
+
+  width: 30px;
+
+}
+
+
+
+/* menu screen */
+
+.container-menu{
+
+  padding: 0 50px;
+
+  text-align: center;
+
+}
+
+.container-menu div{
+
+  margin: 5px 0;
+
+  width: 100%;
+
+}
+
+.btn-secondary{
+
+  background: #134383;
+
+  border-color: #134383;
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  text-transform: uppercase;
+
+  font-size: 30px;
+
+}
+
+.btn-secondary:hover,
+
+.btn-secondary:focus{
+
+  background: #fff;
+
+  color: #134383;
+
+  border-color: #fff;
+
+  box-shadow: 0 0 10px #d1d1d1;
+
+}
+
+.btn-secondary:active,
+
+.btn-secondary:not(:disabled):not(.disabled):active{
+
+  background: #d1d1d1;
+
+  color: #fff;
+
+  border-color: #d1d1d1;
+
+  box-shadow: none;
+
+  outline: none;
+
+}
+
+
+
+
+
+/* reglas screen */
+
+.container-reglas{
+
+  padding: 0 25px;
+
+  text-align: left;
+
+  max-height: 500px;
+
+  overflow: hidden;
+
+  overflow-y: scroll;
+
+}
+
+.container-reglas h1{
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  color: #134383;
+
+  font-weight: 300;
+
+  margin-bottom: 15px;
+
+}
+.container-reglas ol{
+
+    color: #134383;
+
+    font-weight: 300;
+
+    font-size: 18px;
+
+    margin-left: 20px;
+
+  }
+
+  .container-reglas ol li{
+
+  font-size: 18px;
+
+  margin-bottom: 15px;
+
+    font-weight: 400;
+
+
+  }
+
+  .container-reglas ol li span{
+
+    font-size: 20px;
+
+    font-weight: 300;
+
+  }
+
+
+
+
+/* fixture screen */
+
+section.fixture-screen{
+
+  position: relative;
+
+  padding: 0;
+
+  width: 100%;
+
+}
+
+.container-fixture{
+
+  padding: 0 25px;
+
+  text-align: center;
+
+  max-height: 400px;
+
+  overflow-y: scroll;
+
+  overflow-x: hidden;
+
+}
+
+.fixture-group{
+
+  margin: 15px 0;
+
+}
+
+.fixture-user-group{
+
+  margin: 15px 0;
+
+  overflow: hidden;
+
+  overflow-y: scroll;
+
+  max-height: 400px;
+
+  padding: 0 25px;
+
+  position: relative;
+
+}
+
+.title-group{
+
+  text-align: center;
+
+  padding: 10px 15px;
+
+  background: #134383;
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+}
+
+.item-marcador{
+
+  padding-top: 25px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #d1d1d1;
+
+}
+
+.marcador{
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-content: center;
+
+  align-items: center;
+
+  font-weight: 400;
+
+  color: #494949;
+
+}
+
+.marcador div{
+
+  width: 50%;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-content: center;
+
+  align-items: center;
+
+  margin: 0 5px;
+
+}
+
+.marcador div:first-child{
+
+  justify-content: flex-end;
+
+}
+
+.marcador div:last-child{
+
+  justify-content: flex-start;
+
+}
+
+.marcador div > .item-pais{
+
+  width: 70%;
+
+  font-size: 17px;
+
+}
+
+.item-pais span{
+
+  padding: 0 15px;
+
+}
+
+.item-pais span img{
+
+  height: 25px;
+
+}
+
+.marcador div > .goles{
+
+  width: 30%;
+
+  border: 1px solid #d1d1d1;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  font-size: 35px;
+
+  color: #000;
+
+  justify-content: center;
+
+}
+
+.marcador div > input.goles{
+
+  text-align: center;
+
+}
+
+.info-partido{
+
+  text-align: center;
+
+  padding-top: 10px;
+
+  color: #494949;
+
+  font-weight: 300;
+
+  font-size: 16px;
+
+}
+
+
+
+/* reglas screen */
+
+section.reglas-screen{
+
+  padding: 0;
+
+  position: relative;
+
+}
+
+
+
+
+
+/* participantes screen */
+
+section.participantes-screen{
+
+  width: 100%;
+
+  padding: 0 30px;
+
+  position: relative;
+
+}
+
+.title-screen{
+
+  color: #134383;
+
+  text-transform: uppercase;
+
+  margin-bottom: 25px;
+
+}
+
+.title-screen h2{
+
+  font-weight: 300;
+
+}
+
+table,th,td{
+
+  border-bottom: 1px solid #494949;
+
+}
+
+th,td{
+
+  padding: 10px 0;
+
+}
+
+tbody{
+
+  font-weight: 400;
+
+}
+
+.table-participantes{
+
+  width: 100%;
+
+}
+
+.table-participantes thead tr th{
+
+  text-align: left;
+
+}
+
+.table-participantes thead tr th:nth-child(1){
+
+  width: 13%;
+
+}
+
+.table-participantes thead tr th:nth-child(2){
+
+  width: 37%;
+
+}
+
+.table-participantes thead tr th:nth-child(3){
+
+  width: 15%;
+
+}
+
+.table-participantes thead tr th:nth-child(4){
+
+  width: 25%;
+
+}
+
+.table-participantes thead tr th span img{
+
+  height: 35px;
+
+}
+
+.table-participantes tbody tr:nth-child(1),
+
+.table-participantes tbody tr:nth-child(2),
+
+.table-participantes tbody tr:nth-child(3){
+
+  font-weight: 700;
+
+  font-size: 23px;
+
+  color: #134383;
+
+}
+
+.table-participantes tbody tr{
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #494949;
+
+}
+
+.btn-pronostico{
+
+  background-color: transparent;
+
+  color: #134383;
+
+  font-size: 15px;
+
+}
+
+.container-participantes{
+  
+  max-height: 500px;
+  overflow-y: scroll;
+
+}
+
+
+
+
+
+/* pronosticos screen */
+
+section.pronosticos-screen{
+
+  padding: 0;
+
+  position: relative;
+
+  width: 100%;
+
+}
+
+.container-pronostico{
+
+  position: relative;
+
+}
+
+.title-container{
+
+  color: #134383;
+
+  font-weight: 300;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+}
+
+.title-container h1{
+
+  font-weight: 700;
+
+}
+
+.puntaje-container{
+
+  font-size: 20px;
+
+  font-weight: 400;
+
+  color: #5b9f30;
+
+}
+
+.puntaje-container span{
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+}
+
+.form-footer{
+
+  margin: 25px 0;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-content: center;
+
+  align-items: center;
+
+}
+
+.form-footer div{
+
+  width: 50%;
+
+  text-align: center;
+
+  padding: 0 5px;
+
+}
+
+.btn-guardar{
+
+  font-weight: 700;
+
+  font-size: 25px;
+
+  width: 100%;
+
+  background:#f15a25;
+
+  color: #fff;
+
+  text-transform: uppercase;
+
+  letter-spacing: .5px;
+
+  border-radius: 5px;
+
+  padding: 10px 25px;
+
+}
+
+.btn-guardar:hover,
+
+.btn-guardar:focus{
+
+  background: #fff;
+
+  color: #f15a25;
+
+  box-shadow: 0 0 10px #d1d1d1;
+
+}
+
+.btn-editar{
+
+  font-weight: 700;
+
+  font-size: 25px;
+
+  width: 100%;
+
+  background:#134383;
+
+  color: #fff;
+
+  text-transform: uppercase;
+
+  letter-spacing: .5px;
+
+  border-radius: 5px;
+
+  padding: 10px 25px;
+
+}
+
+.btn-editar:hover,
+
+.btn-editar:focus{
+
+  background: #fff;
+
+  color: #134383;
+
+  box-shadow: 0 0 10px #d1d1d1;
+
+}
+
+
+
+
+
+@media (max-width: 600px){
+
+  .contador-home h3{
+
+    font-size: 20px;
+
+  }
+
+  .countdown{
+
+    font-size: 60px;
+
+  }
+
+  section.pronosticos-screen{
+
+    padding: 0 20px;
+
+  }
+
+  .btn-guardar,
+
+  .btn-editar{
+
+    font-size: 20px;
+
+  }
+
+  .container-reglas ol{
+
+    color: #134383;
+
+    font-weight: 300;
+
+    font-size: 18px;
+
+    margin-left: 20px;
+
+  }
+
+  .container-reglas ol li{
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    margin-bottom: 20px;
+
+  }
+
+  .container-reglas ol li span{
+
+    font-size: 20px;
+
+    font-weight: 300;
+
+  }
+
+  .fixture-user-group{
+
+    padding: 0;
+
+  }
+
+  .table-participantes tbody tr:nth-child(1), .table-participantes tbody tr:nth-child(2), .table-participantes tbody tr:nth-child(3){
+    font-size: 20px;
+  }
+  .btn-ver-pronostico{
+    padding: 0;
+  }
+  .marcador div > .item-pais{
+    font-size: 14px;
+  }
+  .info-partido{
+    font-size: 13px;
+  }
+  .marcador div > input.goles{
+    max-width: 45px;
+    width: 45px;
+  }
+  .fixture-user-group{
+    max-height: 350px;
+  }
+
+}

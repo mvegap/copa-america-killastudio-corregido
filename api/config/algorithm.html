@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Puntaje: <span id="ptje">0</span></h2>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <input type="number" id="score_teamA_fixture" name="score_teamA_fixture" class="form-control" placeholder="Score Fixture Equipo A">
+                </div>
+                <div class="form-group">
+                    <input type="number" id="score_teamB_fixture" name="score_teamB_fixture" class="form-control" placeholder="Score Fixture Equipo B">
+                </div>
+                <div class="form-group">
+                    <input type="number" id="score_teamA_user" name="score_teamA_user" class="form-control" placeholder="Score Usuario Equipo A">
+                </div>
+                <div class="form-group">
+                    <input type="number" id="score_teamB_user" name="score_teamB_user" class="form-control" placeholder="Score Usuario Equipo B">
+                </div>
+                <button onclick="asignaPuntaje()" class="btn btn-success btn-block">Calcular</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript">
+        
+
+
+        function getNameWinner(num1,num2){
+        
+            if(num1 > num2){
+                return "teamA";
+            }else if(num1 == num2){
+                return "empate";
+            }else{
+                return "teamB";
+            }
+            
+        }
+
+        function asignaPuntaje(){
+
+            // SCORE OFICIAL
+            let score_teamA_fixture = document.getElementById('score_teamA_fixture').value;
+            let score_teamB_fixture = document.getElementById('score_teamB_fixture').value;
+
+            // SCORE DEL USUARIO
+            let score_teamA_user = document.getElementById('score_teamA_user').value;
+            let score_teamB_user = document.getElementById('score_teamB_user').value;
+        
+            let winner_fixture = getNameWinner(score_teamA_fixture,score_teamB_fixture);
+            let winner_user = getNameWinner(score_teamA_user,score_teamB_user);
+            
+            if(score_teamA_fixture === score_teamA_user && score_teamB_fixture === score_teamB_user){
+                let puntaje = 2;
+                // console.log('Puntaje: ' + puntaje);
+                let rpta = document.getElementById('ptje')
+                rpta.innerHTML = puntaje;
+            }else if(winner_fixture == winner_user){
+                let puntaje = 1;
+                // console.log('Puntaje: ' + puntaje);
+                let rpta = document.getElementById('ptje')
+                rpta.innerHTML = puntaje;
+            }else{
+                let puntaje = 0;
+                // console.log('Puntaje: ' + puntaje);
+                let rpta = document.getElementById('ptje')
+                rpta.innerHTML = puntaje;
+            }
+        
+        
+        }     
+    </script>
+</body>
+</html>

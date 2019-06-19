@@ -1,0 +1,27 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+
+.column-data{
+	overflow: hidden;
+	overflow-y: scroll;
+	max-height: 550px;
+}
+.form-control{
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+.text-detail{
+	font-size: 13px;
+}
